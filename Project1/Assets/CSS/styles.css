@@ -1,0 +1,58 @@
+h1{
+    font-family: cursive;
+    font-size: 50px;
+    color: seashell;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2{
+    font-family: fantasy;
+    font-size: 24px;
+    color: gold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+h3{
+    font-family: fantasy;
+    font-size: 24px;
+    color: gold;
+    margin-bottom: 0;
+}
+
+p{
+    font-family: sans-serif;
+    color:peru;
+    margin-left: 30px;
+    margin-top: 0;
+    line-height: 20px;
+    max-width: 900px;
+}
+
+a:link{
+    color: green;  
+}
+
+a:visited{
+    color: darkgreen;  
+}
+
+a:hover{
+    color: darkseagreen;
+}
+
+a:active{
+    color: forestgreen;
+}
+
+header{
+    
+}
+
+body{
+    background-color: darkred;
+
+
+}
+
