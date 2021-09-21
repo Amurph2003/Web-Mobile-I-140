@@ -41,7 +41,7 @@ p{
     color:peru;
     margin-left: 30px;
     margin-top: 0;
-    line-height: 20px;
+    line-height: 25px;
     max-width: 900px;
 }
 
@@ -52,6 +52,23 @@ p{
     margin-left: 30px;
     margin-top: 0;
     margin-bottom: 30px;
+}
+
+.roots{
+    font-family: sans-serif;
+    color:peru;
+    margin-left: 30px;
+    margin-top: 0;
+    line-height: 25px;
+    max-width: 900px;
+}
+
+.location{
+    font-family: sans-serif;
+    color:peru;
+    margin-top: 0;
+    margin-bottom: 5px;
+    max-width: 900px;
 }
 
 dt{
@@ -93,7 +110,5 @@ a:active{
 
 body{
     background-color: darkred;
-
-
 }
 
