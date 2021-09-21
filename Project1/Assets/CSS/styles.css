@@ -14,11 +14,26 @@ h2{
     margin-bottom: 8px;
 }
 
+.title{
+    font-family: fantasy;
+    font-size: 30px;
+    color: gold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
 h3{
     font-family: fantasy;
     font-size: 24px;
     color: gold;
     margin-bottom: 0;
+}
+
+h4{
+    font-family: fantasy;
+    font-size: 18px;
+    color: peru;
+    margin-top: 0;
 }
 
 p{
@@ -28,6 +43,35 @@ p{
     margin-top: 0;
     line-height: 20px;
     max-width: 900px;
+}
+
+.toppings{
+    font-family: cursive;
+    color:peru;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+dt{
+    font-family: cursive;
+    color:peru;
+    font-size: 19px;
+    margin-left: 25px;
+    margin-top: 0;
+    line-height: 30px;
+    max-width: 900px;
+}
+
+dd{
+    font-family: cursive;
+    color:peru;
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 0;
+    line-height: 30px;
+    max-width: 800px;
 }
 
 a:link{
@@ -46,9 +90,6 @@ a:active{
     color: forestgreen;
 }
 
-header{
-    
-}
 
 body{
     background-color: darkred;
