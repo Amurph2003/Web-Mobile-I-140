@@ -7,7 +7,7 @@ h1{
 }
 
 h2{
-    font-family: fantasy;
+    font-family: 'Copperplate Gothic', fantasy;
     font-size: 24px;
     color: gold;
     margin-top: 15px;
@@ -15,7 +15,7 @@ h2{
 }
 
 .title{
-    font-family: fantasy;
+    font-family: 'Copperplate Gothic', fantasy;
     font-size: 30px;
     color: gold;
     margin-top: 15px;
@@ -23,14 +23,14 @@ h2{
 }
 
 h3{
-    font-family: fantasy;
+    font-family: 'Copperplate Gothic', fantasy;
     font-size: 24px;
     color: gold;
     margin-bottom: 0;
 }
 
 h4{
-    font-family: fantasy;
+    font-family: 'Copperplate Gothic', fantasy;
     font-size: 18px;
     color: peru;
     margin-top: 0;
