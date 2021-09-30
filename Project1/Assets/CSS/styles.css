@@ -30,7 +30,7 @@ h3{
 }
 
 h4{
-    font-family: 'Copperplate Gothic', fantasy;
+    font-family: cursive;
     font-size: 18px;
     color: white;
     margin-top: 0;
@@ -103,11 +103,11 @@ dd{
     padding-bottom: 25%;
 }
 
-#locations{
+.locations{
     padding-bottom: 10%;
 }
 
-#contact{
+.contact{
     float: left;
     margin-left: 25px;
     margin-right: 25px;
@@ -172,5 +172,5 @@ body{
 /* max-width is for if screen is less than designated size; min-width is for if screen is larger than designated size */
 @media only screen and (max-width: 600px){
     h1{font-size: 30px;}
-    h4{font-size: 14px;}
+    h4{font-size: 10px;}
 }
