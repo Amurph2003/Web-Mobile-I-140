@@ -169,3 +169,8 @@ body{
     background-color: darkred;
 }
 
+/* max-width is for if screen is less than designated size; min-width is for if screen is larger than designated size */
+@media only screen and (max-width: 600px){
+    h1{font-size: 30px;}
+    h4{font-size: 14px;}
+}
