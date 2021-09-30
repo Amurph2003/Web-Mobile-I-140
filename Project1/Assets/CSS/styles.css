@@ -1,6 +1,6 @@
 h1{
     font-family: cursive;
-    font-size: 50px;
+    font-size: 40px;
     color: seashell;
     margin-top: 0;
     margin-bottom: 0;
@@ -32,7 +32,7 @@ h3{
 h4{
     font-family: 'Copperplate Gothic', fantasy;
     font-size: 18px;
-    color: peru;
+    color: white;
     margin-top: 0;
 }
 
@@ -89,6 +89,63 @@ dd{
     margin-top: 0;
     line-height: 30px;
     max-width: 800px;
+}
+
+.splash{
+    max-width: 100%;
+    background-size: contain;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-bottom: 25%;
+}
+
+#locations{
+    padding-bottom: 10%;
+}
+
+#contact{
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#about{
+    float: right;
+    margin-left: 8px;
+    margin-bottom: 5px;
+}
+
+header{
+    padding-top: 20px;
+}
+
+nav{
+    
+    padding-top: 25%;
+}
+
+.link{
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-left: 8px;
+}
+
+.pizzas{
+    max-width: 100%;
+    background-repeat: no-repeat;
+    padding: 5%;
+}
+
+.knots{
+    max-width: 100%;
+    padding: 5%;
+    background-repeat: no-repeat;
+    color: red
 }
 
 a:link{
