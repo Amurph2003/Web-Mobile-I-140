@@ -151,18 +151,26 @@ nav{
 
 a:link{
     color: orange;  
+    font-size: 20px;
+    font-family: cursive;
 }
 
 a:visited{
     color: orange;  
+    font-size: 20px;
+    font-family: cursive;
 }
 
 a:hover{
     color: darkseagreen;
+    font-size: 20px;
+    font-family: cursive;
 }
 
 a:active{
     color: forestgreen;
+    font-size: 20px;
+    font-family: cursive;
 }
 
 ul{
@@ -199,10 +207,6 @@ main{
     left: 0;
     z-index: -1;
     padding-bottom: 25%;
-}
-
-.color{
-    color: gold;
 }
 
 body{
