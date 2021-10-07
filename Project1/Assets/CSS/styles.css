@@ -4,6 +4,7 @@ h1{
     color: seashell;
     margin-top: 0;
     margin-bottom: 0;
+    padding-left: 10px;
 }
 
 h2{
@@ -35,6 +36,7 @@ h4{
     font-size: 18px;
     color: white;
     margin-top: 0;
+    padding-left: 10px;
 }
 
 p{
@@ -197,6 +199,9 @@ main{
     padding-top: 10%;
 }
 
+#backlink{
+    padding-left: 10px;
+}
 .back{
     max-width: 100%;
     background-size: contain;
