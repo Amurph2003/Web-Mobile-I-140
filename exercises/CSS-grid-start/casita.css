@@ -1,0 +1,148 @@
+	* { box-sizing: border-box; }
+
+	body { font-family: Verdana, Arial, sans-serif; 
+		   background-color: #330000;	
+		 }
+
+	header, h1, .wrapper { margin-top: 0; }
+
+	.wrapper { background-color: beige; 
+			   width: 90%;	
+			   margin: auto; 
+			   color: #330000;
+			 /*  insert wrapper grid code here */
+			 display: grid;
+			 grid-template-columns: auto auto auto;
+			 grid-template-areas: "header nav nav"
+			 					  "main main aside"
+								  "footer footer footer";
+
+			} 
+
+	h1, h2 { color: #003300; }
+
+	header { background-image: url(images/header.jpg);
+			 background-repeat: no-repeat;  	
+			 background-size: cover; 
+			 /*  insert grid area code here */
+			 grid-area: header;
+			 }
+
+	h1 { text-align: center; 
+		 font-size: 300%; 
+		 padding: 5% 0;
+     	 text-shadow: 3px 3px 3px cornsilk;	
+		}
+
+	nav {
+		 /* insert grid area code here */
+		 grid-area: nav;
+		 }
+	main {
+		 /* insert grid area code here */
+		 grid-area: main;
+		 }
+	aside {
+		 /* insert grid area code here */
+		 grid-area: aside;
+		 }
+
+	nav, main, aside { padding: 0 1em; }
+
+	img { width: 100%; 
+		  height: auto; 
+		}
+
+	nav ul { list-style-type: none; 
+			 font-size: 1.2em; 
+			 padding-left: 0; 
+			}
+
+	nav a { text-decoration: none;}
+
+	nav a:link { color: #330000; }
+
+	nav a:visited { color: #003300; }
+
+	nav a:hover { color: #996600; }
+
+	footer { text-align: center; 
+			 font-size: 80%; 
+			 font-style: italic;
+			 color: #003300; 
+			 padding: 2.5%;
+		 	/* insert grid area code here */
+			 grid-area:footer;
+			 }
+
+@media only screen and (max-width: 1024px) {
+			body { margin: 0; 
+				   padding: 0; 
+				} 
+			
+			.wrapper { width: auto; 
+					   margin: 0; 
+					}
+
+				h1 { font-size: 200%; }
+				
+				nav ul { text-align: center; }
+
+				nav li { padding: 0 0.5em;
+						 font-size: 1.2em; 
+						 display: inline;
+						 }	
+				/* insert wrapper grid code here */
+				.wrapper {
+			 		grid-template-columns: 2fr 1fr;
+			 		grid-template-areas: "header header"
+			 					  		 "nav nav"
+										 "main aside"
+								   		 "footer footer";
+				}
+				/* insert row & column code for  header, nav, main, aside, footer */
+				header { 
+					grid-area: header;
+					}
+				nav {
+					grid-area: nav;
+					}
+				main {
+					grid-area: main;
+					}
+				aside {
+					grid-area: aside;
+					}
+				footer {
+					grid-area: footer;
+					}
+
+			}		
+@media only screen and (max-width: 768px) {
+				/* insert wrapper grid code here */
+				.wrapper {
+			 		grid-template-columns: auto;
+			 		grid-template-areas: "header"
+					 					 "nav"
+					 					 "main"
+										 "aside"
+										 "footer";
+				}
+				/* insert grid area code for  header, nav, main, aside, footer */
+				header { 
+					grid-area: header;
+					}
+				nav {
+					grid-area: nav;
+					}
+				main {
+					grid-area: main;
+					}
+				aside {
+					grid-area: aside;
+					}
+				footer {
+					grid-area: footer;
+					}
+			}
+	header, main, nav, footer, figure, figcaption { display: block; }
