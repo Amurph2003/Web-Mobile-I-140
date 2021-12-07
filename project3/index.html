@@ -23,17 +23,38 @@
             </nav>
 
             <div id='count'>
-                <h2>Placehold Countdown Time</h2>
+                <h2></h2>
             </div>
+            
+            <script>
+                var releaseDate = new Date('Dec 17, 2021 0:00:00').getTime();
+                var time = setInterval(function(){
+                    var now = new Date().getTime();
+                    var timePeriod = releaseDate - now;
+                    var days = Math.floor(timePeriod / (1000 * 60 * 60 * 24));
+                    var hrs = Math.floor((timePeriod % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var min = Math.floor((timePeriod % (1000 * 60 * 60)) / (1000 * 60));
+
+                    document.getElementById('count').innerHTML = 'In Theaters in: ' + days + ' days ' + hrs + ' hours and ' + min + ' minutes';
+                    
+                    if (timePeriod < 0) {
+                        clearInterval(time);
+                        document.getElementById('count').innerHTML = 'In Theaters Now!';
+                    }
+                }, 1000);
+            </script>
         </div>
 
-        <div id='synopsis'>
-            <h4>Synopsis</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia venenatis erat et feugiat. Etiam quam justo, mollis eu malesuada non, varius at quam. Nam feugiat malesuada ante ac dapibus. Curabitur iaculis congue sem. Donec mi risus, condimentum eu blandit sit amet, elementum eu metus. Mauris ac fermentum mi. Quisque a pulvinar libero. Mauris ut maximus lectus. Cras nunc ante, feugiat vel magna a, gravida sagittis nisi. Curabitur consectetur neque odio, vitae faucibus purus iaculis eget.</p>
-        </div>
+        <div id='detail'>
+            
+            <div id='synopsis'>
+                <h4>Synopsis</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia venenatis erat et feugiat. Etiam quam justo, mollis eu malesuada non, varius at quam. Nam feugiat malesuada ante ac dapibus. Curabitur iaculis congue sem. Donec mi risus, condimentum eu blandit sit amet, elementum eu metus. Mauris ac fermentum mi. Quisque a pulvinar libero. Mauris ut maximus lectus. Cras nunc ante, feugiat vel magna a, gravida sagittis nisi. Curabitur consectetur neque odio, vitae faucibus purus iaculis eget.</p>
+            </div>
 
-        <div id='posters'>
-            <img id='poster' src='assets/images/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_UY1200_CR90,0,630,1200_AL_.jpg' alt="SpiderMan: No Way Home official poster">
+            <div id='posters'>
+                <img id='poster' src='assets/images/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_UY1200_CR90,0,630,1200_AL_.jpg' alt="SpiderMan: No Way Home official poster">
+            </div>
         </div>
 
         <div id='reviews'>
@@ -46,7 +67,7 @@
         </div>
 
         <div id='trailer'>
-            <video id='nwh' controls autoplay muted>
+            <video id='nwh' controls>
                 <source src='assets/media/NWH_Trailer.mp4' type='video/mp4'>
             </video>
         </div>
