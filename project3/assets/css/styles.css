@@ -91,7 +91,6 @@ h2{
     margin-left: 3%;
     margin-right: 2%;
     float: left;
-    padding-bottom: 16%;
 }
 
 h4{
@@ -110,23 +109,39 @@ h4{
 
 #posters{
     width: 8%;
+    padding-top: 4%;
     margin-left: 10px;
     margin-right: 10px;
     float: right;
-    transition: width 1s margin-left 1s margin-right 1s;
+    transition: width 1s margin-left 1s margin-right 1s padding-top 1s;
 }
 
-#synopsis:hover + #posters{
-    width: 18%;
+#ogol{
+    display: none;
+    margin: 0;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    float: left;
+}
+
+#detail:hover > #posters{
+    width: 20%;
     margin-left: 0;
     margin-right: 2%;
+    padding-top: 8%;
 }
 
-#synopsis:hover{
+#detail:hover > #synopsis{
     width: 74%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
     padding-bottom: 0;
+}
+
+#detail:hover > #ogol{
+    display: block;
+    width: 35%;
 }
 
 #detail{
@@ -181,10 +196,11 @@ h4{
 
 #trailer{
     margin-top: 3%;
+    
 }
 
 #nwh{
-    max-width: 1200px;
+    width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -204,12 +220,13 @@ h3{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas:    'holland dafoe molina cumberbatch'
-                            'z simmons';
+                            'z simmons foxx tomei'
+                            'favr batalon starr revolori';
     margin-left: 3%;
     margin-right: 3%;
 }
 
-#holland, #dafoe, #molina, #cumberbatch, #z, #simmons{
+#holland, #dafoe, #molina, #cumberbatch, #z, #simmons, #foxx, #tomei, #favr, #batalon, #starr, #revolori{
     padding: 2%;
     text-align: center;
 }
@@ -226,7 +243,9 @@ h3{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         grid-template-areas:    'holland dafoe molina'
-                                'cumberbatch z simmons';
+                                'cumberbatch z simmons'
+                                'foxx tomei favr' 
+                                'batalon starr revolori';
         margin-left: 3%;
         margin-right: 3%;
     }
@@ -242,7 +261,10 @@ h3{
         grid-template-columns: 50% 50%;
         grid-template-areas:    'holland dafoe'
                                 'molina cumberbatch'
-                                'z simmons';
+                                'z simmons'
+                                'foxx tomei'
+                                'favr batalon' 
+                                'starr revolori';
         margin-left: 3%;
         margin-right: 3%;
     }
