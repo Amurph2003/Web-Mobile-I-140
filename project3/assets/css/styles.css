@@ -12,10 +12,10 @@ header{
 
 h1{
     font-size: 50px;
-    padding-top: 10px;
+    padding-top: 15px;
     font-family: copperplate, monospace;
     color: white;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     margin: 0;
 }
 
@@ -74,7 +74,7 @@ h2{
 /*     Sticky       */
 
 #sticks{
-    
+    z-index: 5;
     background: darkred;
     position: -webkit-sticky;
     position: sticky;
@@ -87,7 +87,7 @@ h2{
 #synopsis{
     text-align: center;
     font-size: 20px;
-    width: 85%;
+    max-width: 100%;
     margin-left: 3%;
     margin-right: 2%;
     float: left;
@@ -108,12 +108,12 @@ h4{
 }
 
 #posters{
-    width: 8%;
-    padding-top: 4%;
+    width: 10%;
+    padding-top: 2%;
     margin-left: 10px;
     margin-right: 10px;
     float: right;
-    transition: width 1s margin-left 1s margin-right 1s padding-top 1s;
+    transition: width 3s, margin-left 3s, margin-right 3s, padding-top 3s;
 }
 
 #ogol{
@@ -123,29 +123,32 @@ h4{
     margin-left: 20%;
     margin-right: 20%;
     float: left;
+    transition: margin-top 2s;
+    transition-timing-function: ease-in;
 }
 
-#detail:hover > #posters{
-    width: 20%;
+#posters:hover {
+    width: 30%;
     margin-left: 0;
     margin-right: 2%;
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
-#detail:hover > #synopsis{
-    width: 74%;
+#posters:hover + #detail{
+    width: 60%;
     margin-left: 2%;
-    margin-right: 2%;
+    margin-right: 0;
     padding-bottom: 0;
+    display: block;
 }
 
-#detail:hover > #ogol{
+#posters:hover + #detail > #ogol{
     display: block;
-    width: 35%;
+    margin-top: 10%;
 }
 
 #detail{
-    max-width: 1200px;
+    max-width: 85%;
 }
 
 
@@ -161,7 +164,6 @@ h4{
     max-width: 1200px;
     margin: 0;
     width: 100%;
-    background-color: royalblue;
     clear: both;
     text-align: center;
 }
@@ -170,7 +172,7 @@ h4{
     max-width: 600px;
     padding-left: 1%;
     width: 48%;
-    background-color: gold;
+
     float: left;
     text-align: center;
 }
@@ -179,7 +181,6 @@ h4{
     max-width: 600px;
     padding-right: 1%;
     width: 48%;
-    background-color: gold;
     float: right;
     text-align: center;
 }
@@ -191,6 +192,34 @@ h4{
 #r1{
     margin-top: 5%;
 }
+
+/*     Zip          */
+
+#zip{
+    margin-top: 5%;
+    background-color: darkblue;
+}
+
+#zips{
+    width: 25%;
+    margin-left: 40%;
+    text-align: center;
+    font-size: 20px;
+}
+
+input[type=text]{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=submit]{
+    width: 25%;
+    float: left;
+    margin-left: auto;
+
+}
+
 
 /*     Trailer     */
 
