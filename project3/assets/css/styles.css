@@ -245,7 +245,7 @@ h3{
 }
 
 #cast{
-    max-width: 1200px;
+    max-width: 1400px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas:    'holland dafoe molina cumberbatch'
