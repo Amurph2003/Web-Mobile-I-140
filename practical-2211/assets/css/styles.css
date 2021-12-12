@@ -1,0 +1,174 @@
+#content{
+    background-color: #f1f2f0;
+    max-width: 900px;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Helvetica, Arial, Sans-serif;
+    color: #2e4351;
+    padding-bottom: 3%;
+    font-weight: lighter;
+}
+
+body{
+    background-color: #2e4351;
+    margin: 3%;
+}
+
+#logo{
+    float: left;
+    padding: 15px;
+}
+
+#header{
+    font-size: 35px;
+    padding-left: 3%;
+    padding-top: 7%;
+}
+
+#pano{
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#desc{
+    width: 80%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+#fake_link{
+    background-color: #cca152;
+    width: 20%;
+    text-align: center;
+    color: #f1f2f0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#feat{
+    margin-right: 6%;
+    margin-left: 6%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10%;
+    grid-template-areas:    'zombie covid fashion';
+}
+
+.detail{
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.images{
+    width: 100%;
+}
+
+.head{
+    font-size: 20px;
+}
+
+.text{
+    font-size: 15px;
+    color: black;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fut-feat{
+    margin: 3%;
+    background-color: #b36f58;
+    color: #f1f2f0;
+    border-radius: 15px;
+}
+
+#fut-head{
+    padding-left: 3%;
+    padding-top: 2%;
+    font-size: 20px;
+}
+
+ul{
+    padding-left: 7%;
+    padding-bottom: 3%;
+}
+
+li{
+    font-size: 15px;
+    padding: 2%
+}
+
+@media screen and (max-width: 700px) {
+
+    #feat{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas:    'zombie' 
+                                'covid' 
+                                'fashion';
+    }
+
+    #header{
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+    }
+    #fake_link{
+        width: 35%;
+    }
+
+    .images{
+        width: 50%;
+    }
+
+    .text{
+        padding-bottom: 8%;
+    }
+
+    #logo{
+        float: none;
+        padding: 0;
+        margin-right: 25%;
+        margin-left: 25%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #logo{
+        float: none;
+        padding: 0;
+        margin-right: 25%;
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .images{
+        width: 75%;
+    }
+
+    #header{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #fut-head{
+        padding-left: 3%;
+        padding-top: 2%;
+        font-size: 20px;
+    }
+
+    li{
+        font-size: 13px;
+        padding: 2%
+    }
+}
