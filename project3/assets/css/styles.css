@@ -488,9 +488,8 @@ li > a{
         margin-top: 15%;
     }
 
-    #posters:hover + #detail > #ogol{
-        display: hidden;
-        width: 0;
+    #ogol{
+        display: none;
     }
 
     #posters:hover  > #hoverable2{
