@@ -91,6 +91,9 @@ h2{
     margin-left: 3%;
     margin-right: 2%;
     float: left;
+    font-family: monospace;
+    padding-top: 3%;
+    line-height: 150%;
 }
 
 h4{
@@ -108,12 +111,13 @@ h4{
 }
 
 #posters{
-    width: 10%;
+    width: 15%;
     padding-top: 2%;
     margin-left: 10px;
     margin-right: 10px;
     float: right;
     transition: width 3s, margin-left 3s, margin-right 3s, padding-top 3s;
+    transition-timing-function: ease-in;
 }
 
 #ogol{
@@ -123,32 +127,27 @@ h4{
     margin-left: 20%;
     margin-right: 20%;
     float: left;
-    transition: margin-top 2s;
+    transition: margin-top 3s, display 3s;
     transition-timing-function: ease-in;
 }
 
-#posters:hover {
-    width: 30%;
-    margin-left: 0;
-    margin-right: 2%;
-    padding-top: 2%;
+#hoverable1, #hoverable2{
+    transition: color 2s;
+    text-align: center;
 }
 
-#posters:hover + #detail{
-    width: 60%;
-    margin-left: 2%;
-    margin-right: 0;
-    padding-bottom: 0;
-    display: block;
+#ogol2{
+    display: none;
+    transition: display 3s;
 }
 
-#posters:hover + #detail > #ogol{
-    display: block;
-    margin-top: 10%;
-}
+
 
 #detail{
-    max-width: 85%;
+    width: 80%;
+    transition: width 3s, margin-left 3s, margin-right 3s, padding-bottom 3s, display 3s;
+    transition-timing-function: ease-in;
+    
 }
 
 
@@ -157,7 +156,9 @@ h4{
 #reviews{
     margin: 0;
     padding: 0;
+    padding-left: 3%;
     font-size: 25px;
+    padding-right: 3%;
 }
 
 #r1, #r4{
@@ -193,43 +194,59 @@ h4{
     margin-top: 5%;
 }
 
+#ign, #thr, #ew, #cb{
+    font-size: 40px;
+    font-family: cursive;
+}
+
 /*     Zip          */
 
-#zip{
+#zipped{
     margin-top: 5%;
+    margin-bottom: 5%;
     background-color: darkblue;
 }
 
 #zips{
-    width: 25%;
-    margin-left: 40%;
+    width: 35%;
+    margin-left: 35%;
     text-align: center;
     font-size: 20px;
+}
+
+label{
+    font-size: 28px;
 }
 
 input[type=text]{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5%;
 }
 
 input[type=submit]{
     width: 25%;
     float: left;
     margin-left: auto;
-
+    margin-top: 1%;
 }
+
 
 
 /*     Trailer     */
 
 #trailer{
     margin-top: 3%;
+    width: 96%;
+    margin-right: auto;
+    margin-left: auto;
     
 }
 
 #nwh{
     width: 100%;
+    height: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -264,10 +281,92 @@ h3{
     max-width: 100%;
 }
 
+/*      Sources         */
+
+#cite{
+    font-size: 28px;
+    text-align: center;
+    background-color: darkblue;
+    margin-top: 5%;
+}
+
+#cited{
+    font-size: 20px;
+    text-align: center;
+    background-color: darkblue;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.header{
+    text-align: left;
+    font-size: 20px;
+}
+
+h3{
+    padding-left: 3%;
+}
+
+ul{
+    padding-left: 5%;
+}
+
+li > a{
+    color: darkgrey;
+}
+
+/*       Media Query for transitions        */
+
+@media screen and (min-width: 850px) {
+    #posters:hover {
+        width: 30%;
+        margin-left: 0;
+        margin-right: 2%;
+        padding-top: 2%;
+    }
+    
+    #posters:hover + #detail{
+        width: 60%;
+        margin-left: 2%;
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        display: block;
+    }
+    
+    #posters:hover + #detail > #hoverable1{
+        color: black;
+    }
+    
+    #posters:hover + #detail > #ogol{
+        display: block;
+        margin-bottom: 5%;
+    }
+
+    #hoverable1{
+        color: black;
+    }
+}
+
 /*        Media Query for tablet size       */
 
 @media  screen and (max-width: 850px) {
 
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+    h1{
+        font-size: 35px;
+    }
+
+    .nav_item{
+        font-size: 15px;
+    }
+
+    #count{
+        font-size: 27px;
+    }
     #cast{
         display: grid;
         grid-template-columns: 33% 33% 33%;
@@ -277,6 +376,53 @@ h3{
                                 'batalon starr revolori';
         margin-left: 3%;
         margin-right: 3%;
+    }
+
+    #posters:hover {
+        width: 30%;
+        margin-left: 0;
+        margin-right: 2%;
+        padding-top: 2%;
+    }
+    
+    #posters:hover + #detail{
+        width: 60%;
+        margin-left: 2%;
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        display: block;
+    }
+    
+    #posters:hover > #hoverable2{
+        color: black;
+    }
+    
+    #posters:hover + #detail > #ogol{
+        display: block;
+        margin-bottom: 5%;
+        padding-left: 35%;
+    }
+
+    #detail{
+        width: 70%;
+    }
+
+    #posters{
+        width: 20%;
+        padding-top: 15%;
+    }
+
+    #r2, #r3{
+        max-width: 1200px;
+        margin: 0;
+        width: 100%;
+        clear: both;
+        text-align: center;
+    }
+
+    #hoverable1{
+        color: black;
     }
 }
 
@@ -296,5 +442,63 @@ h3{
                                 'starr revolori';
         margin-left: 3%;
         margin-right: 3%;
+    }
+
+    #synopsis{
+        margin: 5px;
+    }
+    
+    #posters{
+        width: 20%;
+        padding-top: 5%;
+        float: none;
+        margin-left: 40%;
+    }
+
+    #ogol2{
+        float: right;
+        width: 20%;
+    }
+
+    #detail{
+        width: 100%;
+    }
+
+    #posters:hover{
+        padding-top: 5%;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    #hoverable1{
+        color: black;
+        width: 90%;
+        margin-right: 0;
+    }
+
+    #posters:hover > #poster{
+        width: 30%;
+        margin-right: 5%;
+    }
+    
+    #posters:hover > #ogol2{
+        display: block;
+        margin-bottom: 5%;
+        width: 60%;
+        margin-top: 15%;
+    }
+
+    #posters:hover + #detail > #ogol{
+        display: hidden;
+        width: 0;
+    }
+
+    #posters:hover  > #hoverable2{
+        color: black;
+    }
+
+    #posters:hover + #detail{
+        width: 100%;
+        margin-left: 0;
     }
 }

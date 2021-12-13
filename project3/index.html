@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Project 3 - SpiderMan: No Way Home</title>
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
@@ -9,21 +10,21 @@
     <body>
         <div id='sticks'>
             <header>
-                <img id='logo' src='assets/images/movie_logo.png'>
+                <img id='logo' src='assets/images/movie_logo.png' alt='SpiderMan Symbol'>
                 <h1>SpiderMan: No Way Home</h1>
             </header>
 
             <nav>
                 <ul id='nav_bar'>
                     <li class='nav_item'><a href="index.html">Home</a></li>
-                    <li class='nav_item'><a href="menu.html">Our Menu</a></li>
-                    <li class='nav_item'><a href="contact.html">Contact</a></li>
-                    <li class='nav_item'><a href="about.html">About Us</a></li>
+                    <li class='nav_item'><a href="cast.html">Cast</a></li>
+                    <li class='nav_item'><a href="backstory.html">Backstory</a></li>
+                    <li class='nav_item'><a href="related.html">Related Films</a></li>
                 </ul>
             </nav>
 
             <div id='count'>
-                <h2></h2>
+                <h2>Countdown Goes Here</h2>
             </div>
             
             <script>
@@ -34,8 +35,9 @@
                     var days = Math.floor(timePeriod / (1000 * 60 * 60 * 24));
                     var hrs = Math.floor((timePeriod % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     var min = Math.floor((timePeriod % (1000 * 60 * 60)) / (1000 * 60));
+                    var sec = Math.floor((timePeriod % (1000 * 60)) / 1000);
 
-                    document.getElementById('count').innerHTML = 'In Theaters in: ' + days + ' days ' + hrs + ' hours and ' + min + ' minutes';
+                    document.getElementById('count').innerHTML = 'In Theaters in: ' + days + ' days ' + hrs + ' hours ' + min + ' minutes and ' + sec + ' seconds';
                     
                     if (timePeriod < 0) {
                         clearInterval(time);
@@ -47,32 +49,26 @@
 
         <div id='posters'>
             <img id='poster' src='assets/images/official_poster.jpg' alt="SpiderMan: No Way Home official poster">
+
+            <img id='ogol2' src='assets/images/full_logo.png'
+            alt='Movie Logo with release dates and formats'>
+
+            <div id='hoverable2'>
+                <p>(Hover over the poster to enlarge)</p>
+            </div>
         </div>
 
         <div id='detail'>
             <div id='synopsis'>
-                <h4>Synopsis</h4>
-                <p>For the first time in the cinematic history of Spider-Man, our friendly neighborhood hero's identity is revealed, bringing his Super Hero responsibilities into conflict with his normal life and putting those he cares about most at risk. When he enlists Doctor Strange’s help to restore his secret, the spell tears a hole in their world, releasing the most powerful villains who’ve ever fought a Spider-Man in any universe. Now, Peter will have to overcome his greatest challenge yet, which will not only forever alter his own future but the future of the Multiverse.</p>
+                <p>"For the first time in the cinematic history of Spider-Man, our friendly neighborhood hero's identity is revealed, bringing his Super Hero responsibilities into conflict with his normal life and putting those he cares about most at risk. When he enlists Doctor Strange’s help to restore his secret, the spell tears a hole in their world, releasing the most powerful villains who have ever fought a Spider-Man in any universe. Now, Peter will have to overcome his greatest challenge yet, which will not only forever alter his own future but the future of the Multiverse." <br>- From the Official Website for SpiderMan: No Way Home</p>
             </div>
 
-            <img id='ogol' src='assets/images/full_logo.png'>
-        </div>
-
-        <div id='reviews'>
-            <p id='r1'>Morbi quis velit odio. Maecenas non diam orci. Proin pretium, velit vitae viverra mollis,</p>
-            <div id='r23'>
-                <p id='r2'>Donec rhoncus arcu ut massa viverra pellentesque. Morbi eget nulla ullamcorper, egestas est ac, vulputate libero.</p>
-                <p id='r3'>Vestibulum blandit at massa sit amet gravida. Integer tincidunt, leo vitae molestie ultricies, velit augue efficitur justo, at elementum orci orci et libero.</p>
+            <div id='hoverable1'>
+                <p>(Hover over the poster to enlarge)</p>
             </div>
-            <p id='r4'>Vestibulum semper velit sit amet leo tincidunt sollicitudin.</p>
-        </div>
 
-        <div id='zip'>
-            <form id='zips'>
-                <label for='zip'>Locate a theater near you</label><br>
-                <input type='text' id='zipped' placeholder="zip code/town">
-                <input type='submit' id='submit'>
-            </form>
+            <img id='ogol' src='assets/images/full_logo.png'
+            alt='Movie Logo with release dates and formats'>
         </div>
 
         <div id='trailer'>
@@ -81,82 +77,152 @@
             </video>
         </div>
 
+        <div id='reviews'>
+            <p id='r1'><span id='thr'>Tom Holland's Best Spiderman Performance Yet</span> - The Hollywood Reporter</p>
+            <div id='r23'>
+                <p id='r2'><span id='ign'>Epic</span> - IGN</p>
+                <p id='r3'><span id='ew'>Amazing</span> - Entertainment Weekly</p>
+            </div>
+            <p id='r4'><span id='cb'>Biggest Marvel Movie Since Avengers: Endgame</span> - Cinema Blend</p>
+        </div>
+
+        <div id='zipped'>
+            <form id='zips'>
+                <label for='zip'>Locate a theater near you</label><br>
+                <input type='text' id='zip' placeholder="zip code/town">
+                <input type='submit' id='submit'>
+            </form>
+        </div>
+
+        
+
         <h3>Cast Members</h3>
 
         <div id='cast'>
             <div id='holland'>
-                <img class='actor' src='assets/images/holland.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/holland.jpg' alt='Cast picture of Tom Holland' width='200' height='300'>
                 <p>Tom Holland</p>
                 <p>Peter Parker 'Spiderman'</p>
             </div>
 
             <div id='dafoe'>
-                <img class='actor' src='assets/images/dafoe.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/dafoe.jpg' alt='Cast picture of Willem Dafoe' width='200' height='300'>
                 <p>Willem Dafoe</p>
                 <p>Norman Osborne 'Green Goblin'</p>
             </div>
 
             <div id='molina'>
-                <img class='actor' src='assets/images/molina.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/molina.jpg' alt='Cast picture of Alfred Molina' width='200' height='300'>
                 <p>Alfred Molina</p>
                 <p>Otto Octavius 'Doc Ock'</p>
             </div>
 
             <div id='cumberbatch'>
-                <img class='actor' src='assets/images/cumberbatch.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/cumberbatch.jpg' alt='Cast picture of Benedict Cumberbatch' width='200' height='300'>
                 <p>Benedict Cumberbatch</p>
                 <p>Stephen Strange 'Doctor Strange'</p>
             </div>
 
             <div id='z'>
-                <img class='actor' src='assets/images/zendaya.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/zendaya.jpg' alt='Cast picture of Zendaya' width='200' height='300'>
                 <p>Zendaya</p>
                 <p>MJ</p>
             </div>
 
             <div id='simmons'>
-                <img class='actor' src='assets/images/simmons.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/simmons.jpg' alt='Cast picture of J.K. Simmons' width='200' height='300'>
                 <p>J.K. Simmons</p>
                 <p>J. Jonah Jameson</p>
             </div>
 
             <div id='foxx'>
-                <img class='actor' src='assets/images/foxx.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/foxx.jpg' alt='Cast picture of Jamie Foxx' width='200' height='300'>
                 <p>Jamie Foxx</p>
                 <p>Max Dillon 'Electro'</p>
             </div>
 
             <div id='tomei'>
-                <img class='actor' src='assets/images/tomei.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/tomei.jpg' alt='Cast picture of Marisa Tomei' width='200' height='300'>
                 <p>Marisa Tomei</p>
                 <p>May Parker</p>
             </div>
 
             <div id='favr'>
-                <img class='actor' src='assets/images/favr.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/favr.jpg' alt='Cast picture of Jon Favreau' width='200' height='300'>
                 <p>Jon Favreau</p>
                 <p>Happy Hogan</p>
             </div>
 
             <div id='batalon'>
-                <img class='actor' src='assets/images/batalon.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/batalon.jpg' alt='Cast picture of Jacob Batalon' width='200' height='300'>
                 <p>Jacob Batalon</p>
                 <p>Ned Leeds</p>
             </div>
 
             <div id='starr'>
-                <img class='actor' src='assets/images/starr.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/starr.jpg' alt='Cast picture of Martin Starr' width='200' height='300'>
                 <p>Martin Starr</p>
                 <p>Mr. Harrington</p>
             </div>
 
             <div id='revolori'>
-                <img class='actor' src='assets/images/revolori.jpg' width='200' height='300'>
+                <img class='actor' src='assets/images/revolori.jpg' alt='Cast picture of Tony Revolori' width='200' height='300'>
                 <p>Tony Revolori</p>
                 <p>Flash Thompson</p>
             </div>
-        
         </div>
+
+        <div id='sources'>
+            <h2 id='cite'>Works Cited</h2>
+            <p id='cited'>Click on the subject to view the source</p>
+
+            <h3 class='header'>Official Promotional Materials</h3>
+            <ul id='promotional'>
+                <li><a href='https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_UY1200_CR90,0,630,1200_AL_.jpg'>Official Poster</a></li>
+
+                <li><a href='https://www.spidermannowayhome.movie/synopsis/'>Official Synopsis</a></li>
+
+                <li><a href='https://www.youtube.com/watch?v=JfVOs4VSpmA'>Official Trailer</a></li>
+
+                <li><a href='https://www.spidermannowayhome.movie/synopsis/'>Movie Logo</a></li>
+            </ul>
+
+            <h3 class='header'>General Information</h3>
+            <ul id='general'>
+                <li><a href='https://www.google.com/imgres?imgurl=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Fspiderman-logo-transparent%2Fspiderman-logo-transparent-10.jpg&imgrefurl=http%3A%2F%2Fclipart-library.com%2Ffree%2Fspiderman-logo-transparent.html&tbnid=uLsp25RHhnyCWM&vet=12ahUKEwiB4cek48v0AhVBgXIEHadSCpkQMygsegUIARCIAg..i&docid=86dbAFSGPZrAuM&w=900&h=680&itg=1&q=transparent%20background%20spiderman%20symbol&hl=en&ved=2ahUKEwiB4cek48v0AhVBgXIEHadSCpkQMygsegUIARCIAg'>Spider Logo (Top Left Corner)</a></li>
+
+                <li><a href='https://www.imdb.com/title/tt10872600/fullcredits?ref_=tt_cl_sm'>List of Cast Members</a></li>
+
+                <li><a href='https://www.imdb.com/title/tt10872600/?ref_=ttexst_exst_tt'>Official IMDb Page</a></li>
+            </ul>
+
+            <h3 class='header'>Cast Pics</h3>
+            <ul id='cast-pic'>
+                <li><a href="https://theshaderoom.com/wp-content/uploads/2020/09/Jamie-Foxx-scaled-e1598998003439.jpg" class='citation'>Jamie Foxx</a></li>
+
+                <li><a href="https://i.kym-cdn.com/photos/images/facebook/001/552/690/eb5.jpg" class='citation'>Jacob Batalon</a></li>
+
+                <li><a href='https://www.nydailynews.com/resizer/4HZER0Iqgj3K4C_gAvExTpH-0QE=/800x586/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/GG7ZL3RHWF2O5GLWFPKAALSEGU.jpg' class='citation'>Tony Revolori</a></li>
+
+                <li><a href='https://deadline.com/wp-content/uploads/2016/06/martin-starr.jpg' class='citation'>Martin Starr</a></li>
+
+                <li><a href="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2017%2F09%2Fzendaya4.jpg&q=85" class='citation'>Zendaya</a></li>
+
+                <li><a href="https://bsp-static.playbill.com/3c/62/111e67e8464f8adaa73dfbe24a58/frozen-north-american-tour-opening-night-2019-alfred-molina-hr.jpg" class='citation'>Alfred Molina</a></li>
+
+                <li><a href='https://www.goldenglobes.com/sites/default/files/articles/cover_images/willem_dafoe_101919_000_0.jpg?format=pjpg&auto=webp&optimize=high&width=850' class='citation'>Willem Dafoe</a></li>
+
+                <li><a href='https://www.cheatsheet.com/wp-content/uploads/2019/05/Jon-Favreau.jpg' class='citation'>Jon Favreau</a></li>
+
+                <li><a href="https://cdn.vox-cdn.com/thumbor/YxosSOGGrxIBz89a6Vm-PzXMW7g=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23024752/FE_15.jpg" class='citation'>Tom Holland</a></li>
+
+                <li><a href="https://www.cheatsheet.com/wp-content/uploads/2021/05/Benedict-Cumberbatch-1024x683.jpg" class='citation'>Benedict Cumberbatch</a></li>
+
+                <li><a href='https://images2.minutemediacdn.com/image/upload/c_crop,h_359,w_640,x_0,y_46/f_auto,q_auto,w_1100/v1555280045/shape/mentalfloss/gettyimages-461010056.jpg' class='citation'>J.K. Simmons</a></li>
+
+                <li><a href='https://bloximages.chicago2.vip.townnews.com/insidenova.com/content/tncms/assets/v3/editorial/b/35/b35429f8-f372-502c-a219-93e1c78c7f29/612cafef4a20a.image.jpg' class='citation'>Marisa Tomei</a></li>
+                </ul>
+            </div>
 
 
     </body>
